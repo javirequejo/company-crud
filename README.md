@@ -30,15 +30,15 @@ Please explain your approach in a README file.
 
 - Store username, email, password and avatar
 - Store a list of roles names (e.g. admin, moderator)
-- Store relation between users and roles if many roles can belong to many users
+- Store relation between users and roles to support many roles belonging to many users
 
 ### 2. Coding
 
 **Task**: Create RESTful API endpoints in the backend folder using NestJS and Typeorm to:
 
-- create roles by saving it's name
+- create roles by saving its name
 - list all roles
-- create a new user with the fields name, email, pass, avatar and assigning at least 2 roles
+- create a new user with the fields name, email, pass, avatar and assign at least 2 roles
 - list all users including the roles relation
 
 > Note: No file upload required.
