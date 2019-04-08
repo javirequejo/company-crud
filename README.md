@@ -2,7 +2,7 @@
 
 This test is created for you to complete autonomously and to the best of your knowledge.
 
-Please feel free clone the provided repo for a quick start or alternatively create your own docker environment.
+Please feel free to clone the provided repo for a quick start or alternatively create your own docker environment.
 
 ## Goal
 
