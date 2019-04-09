@@ -41,7 +41,9 @@ Please explain your approach in a README file.
 - create a new user with the fields name, email, pass, avatar and assign at least 2 roles
 - list all users including the roles relation
 
-> Note: No file upload required.
+~~~~
+Note: No file upload required.
+~~~~
 
 Run the SQL generated in the first task to create the necessary tables.
 
