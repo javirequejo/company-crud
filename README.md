@@ -52,3 +52,7 @@ Add Typeorm connection to the database and create necessary models to create que
 ### 3. AWS services
 
 **Task**: Please write a list below of the AWS services you would use to deploy and host *the* software described above.
+
+~~~~
+I was the first but not the last. I built the foundation but I'm no founder. First name and last name plus a dotcom, and you will end up in a place where a clue may come.
+~~~~
