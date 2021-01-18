@@ -2,7 +2,6 @@ version: '3'
 
 services:
 
-  # nestJS backend listening on port 3000
   backend:
     build: ./backend
     volumes:
@@ -11,12 +10,17 @@ services:
       - 3000:3000
     links:
       - mysql
-    command: npm run start:dev
+    depends_on:
+      - mysql
+    command: ["./wait-for-it.sh", "mysql:3306", "--", "npm", "run", "start:dev"]
 
-  # mysql service listening on port 3306, username root, password empty
   mysql:
-    image: mysql:5.7.12
+    image: mysql:5.7
     volumes:
       - ./mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=test
+    command: mysqld --character-set-server=utf8

@@ -4,17 +4,22 @@ This test is created for you to complete autonomously and to the best of your kn
 
 Please feel free to clone the provided repo for a quick start or alternatively create your own docker environment.
 
+## You will need
+
+ - Docker CE
+ - Postman or similar for POST requests
+
 ## Goal
 
 To understand your experience regarding data management, coding and infrastructure knowledge please aim to complete all 3 tasks below.
 
-Spend as much time needed but ideally we would like to see your solution within 24 hours.
+This test can be completed under an hour but spend as much time as you need within a reasonable timeframe.
 
 ## Rules
 
-We wanted to create a useful, real-life test so please use the NestJS and Typeorm.
+This test is based on a real-life scenarios and tech-stack at Veratrak, please use NestJS and Typeorm to complete the tasks.
 
-Use best practice and follow RESTful standards.
+Try your best to use your experience, best practice and follow RESTful standards.
 
 We have to be able to run your code and call the endpoints.
 
@@ -22,37 +27,54 @@ Upload your code to a public GIT repository.
 
 Please explain your approach in a README file.
 
+~~~~
+Note: If for some reason you can't complete the tasks in a reasonable time please write pseudo code and explain what you would do and why.
+~~~~
+
 ## Tasks
 
-### 1. Database design
+### 1 - We have a bug!
 
-**Task**: Design and create an importable SQL file with the following conditions:
+Our QA analyst found something in the application and created the following bug ticket:
 
-- Store username, email, password and avatar
-- Store a list of roles names (e.g. admin, moderator)
-- Store relation between users and roles to support many roles belonging to many users
+```
+Issue: Users can be created with the same email address.
+Steps to reproduce:
+- Create user Test User with the email address test@example.com
+- Create a new user Example User with the email address test@example.com
+If a new user is being added to the platform with the same email address as another existing user an error message should display: "This email address already exists"
+```
 
-### 2. Coding
+Please fix the issue!
 
-**Task**: Create RESTful API endpoints in the backend folder using NestJS and Typeorm to:
+### 2 - New feature ahead
 
-- create roles by saving its name
-- list all roles
-- create a new user with the fields name, email, pass, avatar and assign at least 2 roles
-- list all users including the roles relation
+In this sprint we have planned for a new API endpoint that is capable of listing, creating, and deleting companies.
 
-~~~~
-Note: No file upload required.
-~~~~
-
-Run the SQL generated in the first task to create the necessary tables.
-
-Add Typeorm connection to the database and create necessary models to create queries.
-
-### 3. AWS services
-
-**Task**: Please write a list below of the AWS services you would use to deploy and host *the* software described above.
+```
+- Create a new Company entity
+- Create a new Company controller
+- The controller should be able to create a new company also assign users from the users table
+- The controller should be able to list all companies and related users
+- The controller should be able to delete a company and remove the relations but not the users
+```
 
 ~~~~
-I was the first but not the last. I built the foundation but I'm no founder. First name and last name plus a dotcom, and you will end up in a place where a clue may come.
+Note: Once the entity is created Typeorm will attempt to create the DB table so no need to create it manually
+~~~~
+
+### 3 - The customer has a question
+
+A customer needs a new feature and the product owner asks your opinion on approach, feasibility and complexity of the following:
+
+```
+The customer is very happy that they can upload and download documents in our platform but they also have a need to apply an e-signature to the PDF files. They would like their username, email and the current date applied to the PDF document when they click the "Sign" button on the selected file's UI.
+```
+
+Please explain what do you think is needed in a README file, list all components you can think of from database, back-end and front-end point of view.
+
+You may also list your questions for the customer if the feature needs clarifications.
+
+~~~~
+Note: If needed, you can make a few assumptions, e.g. authentication, file upload is already implemented, etc.
 ~~~~
