@@ -8,6 +8,7 @@ Please feel free to clone the provided repo for a quick start or alternatively c
 
  - Docker CE
  - Postman or similar for POST requests
+ - "docker-compose up" to start the project
 
 ## Goal
 
@@ -27,9 +28,7 @@ Upload your code to a public GIT repository.
 
 Please explain your approach in a README file.
 
-~~~~
-Note: If for some reason you can't complete the tasks in a reasonable time please write pseudo code and explain what you would do and why.
-~~~~
+> Note: If for some reason you can't complete the tasks in a reasonable time please write pseudo code and explain what you would do and why.
 
 ## Tasks
 
@@ -37,13 +36,14 @@ Note: If for some reason you can't complete the tasks in a reasonable time pleas
 
 Our QA analyst found something in the application and created the following bug ticket:
 
-```
 Issue: Users can be created with the same email address.
+
 Steps to reproduce:
+
 - Create user Test User with the email address test@example.com
 - Create a new user Example User with the email address test@example.com
+
 If a new user is being added to the platform with the same email address as another existing user an error message should display: "This email address already exists"
-```
 
 Please fix the issue!
 
@@ -51,30 +51,22 @@ Please fix the issue!
 
 In this sprint we have planned for a new API endpoint that is capable of listing, creating, and deleting companies.
 
-```
 - Create a new Company entity
 - Create a new Company controller
 - The controller should be able to create a new company also assign users from the users table
 - The controller should be able to list all companies and related users
 - The controller should be able to delete a company and remove the relations but not the users
-```
 
-~~~~
-Note: Once the entity is created Typeorm will attempt to create the DB table so no need to create it manually
-~~~~
+> Note: Once the entity is created Typeorm will attempt to create the DB table so no need to create it manually
 
 ### 3 - The customer has a question
 
 A customer needs a new feature and the product owner asks your opinion on approach, feasibility and complexity of the following:
 
-```
-The customer is very happy that they can upload and download documents in our platform but they also have a need to apply an e-signature to the PDF files. They would like their username, email and the current date applied to the PDF document when they click the "Sign" button on the selected file's UI.
-```
+"The customer is very happy that they can upload and download documents in our platform but they also have a need to apply an e-signature to the PDF files. They would like their username, email and the current date applied to the PDF document when they click the "Sign" button on the selected file's UI."
 
 Please explain what do you think is needed in a README file, list all components you can think of from database, back-end and front-end point of view.
 
 You may also list your questions for the customer if the feature needs clarifications.
 
-~~~~
-Note: If needed, you can make a few assumptions, e.g. authentication, file upload is already implemented, etc.
-~~~~
+> Note: If needed, you can make a few assumptions, e.g. authentication, file upload is already implemented, etc.
