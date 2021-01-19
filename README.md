@@ -72,4 +72,4 @@ Try your best to explain explain your approch to a non-technical person in a REA
 
 You may also list your questions for the customer if the feature needs clarifications.
 
-> Note: If needed, you can make a few assumptions, e.g. authentication, file upload is already implemented, etc.
+> Note: If needed, you can make a few assumptions, e.g. authentication and file upload is already implemented, maximum PDF size is 500MB, etc.
