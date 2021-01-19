@@ -52,7 +52,7 @@ Please fix the issue!
 In this sprint we have planned for a new API endpoint that is capable of listing, creating, and deleting companies.
 
 The company should have an id, name, short description, and creation date.
-One user can belong to many companies but only one company can belong to a user.
+Many users can belong to a compeny but only one company can belong to a user.
 
 - Create a new Company entity
 - Create a new Company controller
