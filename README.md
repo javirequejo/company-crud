@@ -71,5 +71,3 @@ A customer needs a new feature and the product owner asks your opinion on approa
 Try your best to explain explain your approch to a non-technical person in a README file, list all components you can think of from database, back-end and front-end point of view.
 
 You may also list your questions for the customer if the feature needs clarifications.
-
-> Note: If needed, you can make a few assumptions, e.g. authentication and file upload is already implemented, maximum PDF size is 500MB, etc.
