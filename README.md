@@ -51,9 +51,12 @@ Please fix the issue!
 
 In this sprint we have planned for a new API endpoint that is capable of listing, creating, and deleting companies.
 
+The company should have an id, name, short description, and creation date.
+One user can belong to many companies but only one company can belong to a user.
+
 - Create a new Company entity
 - Create a new Company controller
-- The controller should be able to create a new company also assign users from the users table
+- The controller should be able to create a new company also assign users from the users table by ID
 - The controller should be able to list all companies and related users
 - The controller should be able to delete a company and remove the relations but not the users
 
