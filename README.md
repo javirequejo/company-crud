@@ -18,7 +18,7 @@ This test can be completed under an hour but spend as much time as you need with
 
 ## Rules
 
-This test is based on a real-life scenarios and tech-stack at Veratrak, please use NestJS and Typeorm to complete the tasks.
+This test is based on real-life scenarios and tech-stack at Veratrak, please use NestJS and Typeorm to complete the tasks.
 
 Try your best to use your experience, best practice and follow RESTful standards.
 
