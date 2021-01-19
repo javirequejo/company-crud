@@ -68,7 +68,7 @@ A customer needs a new feature and the product owner asks your opinion on approa
 
 "The customer is very happy that they can upload and download documents in our platform but they also have a need to apply an e-signature to the PDF files. They would like their username, email and the current date applied to the PDF document when they click the "Sign" button on the selected file's UI."
 
-Please explain what do you think is needed in a README file, list all components you can think of from database, back-end and front-end point of view.
+Try your best to explain explain your approch to a non-technical person in a README file, list all components you can think of from database, back-end and front-end point of view.
 
 You may also list your questions for the customer if the feature needs clarifications.
 
