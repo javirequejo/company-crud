@@ -5,10 +5,11 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "target": "es6",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./"
+    "outDir": "/dist",
+    "baseUrl": "."
   },
-  "exclude": ["node_modules"]
+  "exclude": ["/node_modules"]
 }

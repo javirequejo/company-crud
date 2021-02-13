@@ -1,18 +1,22 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { UsersService } from './users.service';
+import { ApiResponse } from '@nestjs/swagger';
+import { User } from './user.entity';
+import { Body, Controller, Get, Post, ValidationPipe, UsePipes } from '@nestjs/common';
+import { UserService } from './user.service';
 import { UserDto } from './dto/user.dto';
 
 @Controller('users')
 export class UserController {
-  constructor(private usersService: UsersService) {}
+  constructor(private usersService: UserService) {}
 
   @Get()
-  findAll(): any {
-    return this.usersService.findAll();
+  async findAll(): Promise<User[]> {
+    return await this.usersService.findAll();
   }
 
   @Post()
-  create(@Body() userDto: UserDto) {
-    return this.usersService.create(userDto);
+  @UsePipes(ValidationPipe)
+  @ApiResponse({ status: 201, description: 'The user has been successfully created.'})
+  async create(@Body() userDto: UserDto) {
+    return await this.usersService.create(userDto);
   }
 }

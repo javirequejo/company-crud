@@ -1,6 +1,8 @@
-import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Company } from './../companies/company.entity';
+import { BaseEntity, Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, Unique } from 'typeorm';
 
 @Entity('users')
+@Unique(['email'])
 export class User extends BaseEntity {
 
   @PrimaryGeneratedColumn('uuid')
@@ -14,5 +16,8 @@ export class User extends BaseEntity {
 
   @CreateDateColumn()
   createdAt: Date;
+
+  @ManyToOne(type => Company, company => company.users, { nullable: true})
+  company: Company;
 
 }
